@@ -4,10 +4,7 @@
     font-weight: 400
 }
 
-body {background-image: url(https://cdn.glitch.global/efdace30-a873-49c7-aaa9-4fa31679ee0c/thumbnails%2F%E7%AE%80%E7%BA%A6%E5%AF%BC%E8%88%AABJ.jpg?1692046600260);
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;}
+body {}
 
 .footer {
     width: 100%;
