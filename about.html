@@ -31,13 +31,20 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link " href="/">本站主页</a>
+                        <a class="nav-link active" href="/">图床主页</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://img.199881.xyz/">免费图床</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./about.html">关于本站</a>
+                        <a class="nav-link active" href="https://199881.xyz/">ws01主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://boke.199881.xyz/">休闲小屋</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">关于本站</a>
                     </li>
                 </ul>
             </div>
@@ -69,6 +76,31 @@
         <div class="container text-center">
             <p class="text-muted">Copyright Ⓒ 2023 All rights reserved. 请勿上传违反中国法律的图片，违者后果自负。 
                 本程序基于Telegraph，开源于GitHub <a href="https://github.com/x-dr/telegraph-Image" target="_blank" >telegraph-Image</a></p>
+
+            <!-- 开站时间开始 -->       
+             <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span> <script language="javascript"> 
+    var now = new Date();
+    function createtime(){
+        var grt= new Date("04/20/2024 13:00:00");/*---这里是网站的启用时间--*/
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "稳定运行"+dnum+"天";
+        document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+    }
+    setInterval("createtime()",250); 
+</script> 
+<!-- 开站时间结束 -->     
+            
         </div>
     </footer>
 
